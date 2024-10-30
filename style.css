@@ -1,0 +1,17 @@
+button{
+    height: 25vw;
+    width: 25vw;
+}
+#um{
+    background-color: darkturquoise;
+}
+#dois{
+    background-color: red;
+}
+#tres{
+    background-color: mediumslateblue;
+}
+button{
+    border-color: white;
+    box-shadow: 2vh 2vh 2vh black;
+}
