@@ -12,6 +12,7 @@ button{
     background-color: mediumslateblue;
 }
 button{
+    margin-left: 20px;
     border-color: white;
     box-shadow: 2vh 2vh 2vh black;
 }
