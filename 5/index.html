@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-color: whitesmoke;
+            text-align: center;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40vh;
+  
+        }
+    </style>
 </head>
 <body>
-    <div id="mensagem">presione uma tecla...</div>
+    <h1 id="texto">aperte uma tecla...</h1>
 </body>
-<script src="script.js"></script>
+<script>
+    let tecla = document.getElementById('texto')
+    addEventListener('keydown',   function (event) {
+        texto.innerText = 'voce apertou a tecla: '+event.key
+    })
+  
+</script>
 </html>

@@ -1,28 +1,24 @@
-let cor1 = document.getElementById('um')
-let cor2 = document.getElementById('dois')
-let cor3 = document.getElementById('tres')
-cor1.addEventListener('click', function(){
-    if (um.style.backgroundColor == "darkturquoise") {
-        um.style.backgroundColor = 'pink' 
-        
-    }else{
-        um.style.backgroundColor = 'darkturquoise'
-    }
+let muda1 = muda1.document.getElementById('um')
+let muda2 = muda2.document.getElementById('dois')
+let muda3 = muda3.document.getElementById('tres')
 
-})
-cor2.addEventListener('click', function(){
-    if (dois.style.backgroundColor == 'red' ) {
-        dois.style.backgroundColor = 'blue'
-    }else{
-        dois.style.backgroundColor = 'red' 
-    }
+  // Função para alternar a cor de um quadrado entre duas cores
+function trocaCor(cor, cor1, cor2){
+    cor.style.backgroundColor =
+    cor.style.backgroundColor === cor1 ? cor2 : cor1;
+}
 
-})
-cor3.addEventListener('click', function(){
-    if(    tres.style.backgroundColor == 'mediumslateblue' ){
-        tres.style.backgroundColor = 'aquamarine' 
-    }else{
-        tres.style.backgroundColor = 'mediumslateblue' 
-    }
 
+muda1.addEventListener('click', function(){
+    toggleColor(this, "red", "yellow");
 })
+muda2.addEventListener('click', function(){
+    toggleColor(this, "pink", "green");
+})
+muda3.addEventListener('click', function(){
+    toggleColor(this, "purple", "black");
+})
+
+
+
+

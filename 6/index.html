@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: whitesmoke;
+            text-align: center;
+           
+        }
+        button{
+            display: flex;
+            justify-content: center;
+            margin-left: 100vh;
+            margin-top: 60vh;
+            height: 10vh;
+            width: 12vh;
+            font-size: 3vh;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <p>Sao Paulo</p>
+    <div class="foto" id="foto">
+        <p id="nome"></p>
+    </div>
+    <button id="votar">Votar</button>
+</body>
+<script>
+    let votar = document.getElementById('votar')
+    document.getElementById('foto')
+        document.getElementsByClassName('foto')
+        document.getElementById('nome')
+    let candidatos = {
+        28: {nome: "Pablo Marçal", foto:'marçal.jpg' },
+        40: {nome: "Tabata Amaral", foto:'tabata.jpeg'},
+        45: {nome: 'Datena', foto:'https://cdn.oantagonista.com/uploads/2024/09/b3d0a314-f30f-44dd-8990-78d3acc17b30-1024x557.jpg.jpg'},
+        50: {nome: 'Guilherme Boulos', foto:'boulos.jpg'},
+        15: {nome: 'Ricardo Nunes', foto: 'ricardo nunes.jpeg'}
+    }
+    const votos = { 28: 0, 15: 0, 50: 0, 45:0, 40:0, nulo: 0 };
+    votar.addEventListener('click', () =>{
+        let numCand = prompt("digite o numero do candidato que vc deseja votar:")
+        let candidato = candidatos[numCand]
+        if(candidato){
+            var confirmacao = confirm(`Candidato: ${candidato.nome}\nConfirmar voto?`);
+            if (confirmacao) {
+                    votos[numCand]++;
+                    exibirVoto(candidato.nome, candidato.foto);
+                }
+            } else {
+                votos.nulo++;
+                exibirVoto("Voto Nulo", "link_para_imagem_voto_nulo.jpg");
+            
+        }
+        function exibirVoto(nome, foto) {
+            document.getElementById("voteDisplay").innerHTML = `
+                <h2>${nome}</h2>
+                <img src="${foto}" alt="Foto do Candidato" style="width:150px;height:150px;">
+                <p>Confirmado!</p>
+            `;
+        }
+    })
+</script>
+</html>
